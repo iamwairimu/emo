@@ -1,0 +1,218 @@
+@import url("https://fonts.googleapis.com/css2?family=Lusitana:wght@400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #0b61ea;
+}
+.frame {
+  width: 900px;
+  margin: 0 auto;
+  margin-top: 60px;
+  border-radius: 5px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background-color: #07a0f6;
+}
+.frame * {
+  z-index: 1;
+}
+.frame img {
+  width: 100%;
+  z-index: 1;
+  opacity: 1;
+}
+.wave-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+.wave {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin-left: 100px;
+  width: 700px;
+  margin-right: 200px;
+  height: 100px;
+  background-image: url(wave.png);
+  background-size: 1000px 100px;
+}
+.wave.wave1 {
+  animation: animate 30s linear infinite;
+  opacity: 0.7;
+  animation-delay: 0s;
+  bottom: 110px;
+}
+.wave.wave2 {
+  animation: animate2 15s linear infinite;
+  opacity: 0.5;
+  animation-delay: -5s;
+  bottom: 120px;
+}
+.wave.wave3 {
+  animation: animate3 20s linear infinite;
+  opacity: 0.3;
+  animation-delay: -10s;
+  bottom: 130px;
+}
+.wave.wave4 {
+  animation: animate4 25s linear infinite;
+  opacity: 0.2;
+  animation-delay: -15s;
+  bottom: 140px;
+}
+@keyframes animate {
+  0% {
+    background-position-x: 0;
+  }
+  100% {
+    background-position-x: 1000px;
+  }
+}
+@keyframes animate2 {
+  0% {
+    background-position-x: 0;
+  }
+  100% {
+    background-position-x: -1000px;
+  }
+}
+@keyframes animate3 {
+  0% {
+    background-position-x: 0;
+  }
+  100% {
+    background-position-x: 1000px;
+  }
+}
+@keyframes animate4 {
+  0% {
+    background-position-x: 0;
+  }
+  100% {
+    background-position-x: -1000px;
+  }
+}
+.frame h3 {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  color: #fff;
+  font-size: 24px;
+  margin: 20px 0;
+}
+p {
+  position: absolute;
+  bottom: 30px;
+  right: 50px;
+  z-index: 2;
+  font-size: 80px;
+  transition: font-size 0.2s;
+}
+p:hover {
+  font-size: 90px;
+  cursor: pointer;
+}
+.rock {
+  position: absolute;
+  bottom: 30px;
+  left: 50px;
+  z-index: 1;
+  font-size: 80px;
+  transition: font-size 0.2s;
+}
+.rock:hover {
+  font-size: 90px;
+  cursor: pointer;
+}
+.anime img {
+  width: 50px;
+  animation: ani 7s linear infinite;
+}
+.anime {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  position: absolute;
+  bottom: 20px;
+  z-index: 0;
+}
+@keyframes ani {
+  0% {
+    transform: translateY(0);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  70% {
+    opacity: 0.7;
+  }
+  100% {
+    transform: translateY(-80vh);
+    opacity: 0;
+  }
+}
+.anime img:nth-child(1) {
+  animation-delay: 1s;
+  width: 32px;
+}
+.anime img:nth-child(2) {
+  animation-delay: 4s;
+  width: 30px;
+}
+.anime img:nth-child(3) {
+  animation-delay: 6s;
+  width: 25px;
+}
+.anime img:nth-child(4) {
+  animation-delay: 2s;
+  width: 31px;
+}
+.anime img:nth-child(5) {
+  animation-delay: 7s;
+  width: 27px;
+}
+.anime img:nth-child(6) {
+  animation-delay: 5s;
+  width: 34px;
+}
+.anime img:nth-child(7) {
+  animation-delay: 3s;
+  width: 28px;
+}
+.line {
+  width: 100%;
+  height: 15px;
+  background-color: #07a0f6;
+  position: absolute;
+  bottom: 118px;
+  z-index: 0;
+}
+.bin {
+  width: 80px;
+  height: 50px;
+  font-size: 27px;
+  position: absolute;
+  bottom: 112px;
+  left: calc(50% - 25px);
+}
+.dirt {
+  width: 30px;
+  height: 30px;
+  background-color: #0b61ea;
+  position: absolute;
+  border-radius: 5px;
+}
