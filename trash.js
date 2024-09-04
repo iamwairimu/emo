@@ -36,7 +36,7 @@ function generateDirt() {
   var dirtLeft = Math.floor(Math.random() * 620);
   var dirt = document.createElement("div");
   dirt.setAttribute("class", "dirt");
-  dirt.appendChild(dirt);
+  dirt.body.appendChild(dirt);
   function fallDownDirt() {
     if (
       dirtBottom < binBottom + 50 &&
@@ -44,7 +44,7 @@ function generateDirt() {
       dirtLeft > binLeft - 30 &&
       dirtLeft < binLeft + 80
     ) {
-      dirt.removeChild(dirt);
+      dirt.remove();
       clearInterval(fallInterval);
       score++;
     }
@@ -55,8 +55,9 @@ function generateDirt() {
       location.reload();
     }
     dirtBottom -= 5;
-    dirt.style.bottom = dirtBottom + "px";
+    dirt.style.position = "absolute";
     dirt.style.left = dirtLeft + "px";
+    dirt.style.bottom = dirtBottom + "px";
   }
   var fallInterval = setInterval(fallDownDirt, 20);
   var dirtTimeout = setTimeout(generateDirt, 2000);
