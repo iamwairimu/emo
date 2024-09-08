@@ -16,7 +16,7 @@ const basketY = canvas.height - basketHeight - 10;
 let fallingObjects = [];
 
 const maxObjects = 10; // Maximum number of falling objects
-let objectCreationDelay = 0; // Delay between object creation
+let objectCreationDelay = 1; // Delay between object creation
 
 document.addEventListener("keydown", moveBasket);
 
@@ -66,12 +66,12 @@ function updateObjects() {
 }
 
 function drawBasket() {
-  ctx.fillStyle = "#0b61ea";
+  ctx.fillStyle = "rgba(225, 130, 54, 2)";
   ctx.fillRect(basketX, basketY, basketWidth, basketHeight);
 }
 
 function drawObjects() {
-  ctx.fillStyle = "#0b61ea"; // Set the fill color for the squares
+  ctx.fillStyle = "#6A2534"; // Set the fill color for the squares
 
   for (const obj of fallingObjects) {
     // Draw a square instead of a circle

@@ -166,7 +166,7 @@ p:hover {
 @keyframes ani {
   0% {
     transform: translateY(0);
-    opacity: 0;
+    opacity: 2;
   }
   50% {
     opacity: 0.5;
@@ -176,7 +176,7 @@ p:hover {
   }
   100% {
     transform: translateY(-80vh);
-    opacity: 0;
+    opacity: 2;
   }
 }
 .anime img:nth-child(1) {
